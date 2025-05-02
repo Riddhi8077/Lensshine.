@@ -1,0 +1,889 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0px;
+  padding-top: 60px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: #f6f4f4;
+  color: #0c0c0c;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: #060606;
+  box-shadow: 0 2px 4px rgba(92, 92, 92, 0.1);
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+header .logo img {
+  height: 250px;
+  width: 250px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fafafa;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.icons a {
+  color: #f6f4f4;
+  font-size: 1.2rem;
+  padding: 5px;
+}
+
+/* ===== WORKING HOVER DROPDOWN SOLUTION ===== */
+.nav-item {
+  position: relative;
+  display: inline-block;
+  z-index: 1000; /* Ensure this is above other elements */
+}
+
+/* Update nav bar buttons to match existing style */
+nav ul li a {
+  color: #fafafa;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px; /* Added padding to match your header style */
+  display: block; /* Changed from default inline */
+}
+
+/* Specific Eyeglasses button styling */
+.nav-item .nav-link {
+  position: relative;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+/* Hover effects */
+.nav-item:hover .nav-link {
+  background: rgba(255,255,255,0.1); /* Subtle hover effect */
+  border-radius: 4px;
+}
+
+.nav-item:hover .nav-link {
+  background: #adadaf; /* Optional: highlight parent item */
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+/* Shop Now Button */
+.btn-shop-now {
+  background-color: #ff6600; /* Button color */
+  color: white; /* Text color */
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+  position: absolute; /* Position the button absolutely within the hero section */
+  top: 50%; /* Move the button down by 50% of the parent's height */
+  left: 50%; /* Move the button right by 50% of the parent's width */
+  transform: translate(-50%, -50%); /* Center the button precisely */
+  z-index: 2; /* Ensure the button is above the overlay */
+}
+
+.btn-shop-now:hover {
+  background-color: #e65c00; /* Darker color on hover */
+}
+/* Remove default margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.hero-content .btn {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.categories {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.categories h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.category-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}
+
+.category-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.category-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.featured-products {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.featured-products h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.product-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.product-buttons button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.product-buttons .add-to-cart {
+  background-color: #ff6600;
+  color: #fff;
+}
+
+.product-buttons .add-to-cart:hover {
+  background-color: #e65c00;
+}
+
+.product-buttons .buy-now {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.product-buttons .buy-now:hover {
+  background-color: #218838;
+}
+
+.product-buttons .prescription {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.product-buttons .prescription:hover {
+  background-color: #0056b3;
+}
+
+.payment {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.payment h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.payment-methods button {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.payment-methods button:hover {
+  background-color: #e65c00;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-content form label {
+  font-size: 1.2rem;
+}
+
+.modal-content form input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.modal-content form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content form button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .category-grid, .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .category-grid, .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* New Sections */
+.new-sections {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.new-sections h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.section-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}
+
+.section-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.section-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.product-buttons .select-lenses {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.product-buttons .select-lenses:hover {
+  background-color: #0056b3;
+}
+
+/* Modal Wrapper */
+.la-prescription-modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.la-prescription-modal-content {
+  background-color: #fff;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.la-prescription-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.la-prescription-modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.la-prescription-modal-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.la-label-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.la-label-btn-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.la-label-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.la-label-btn:hover {
+  background-color: #f9f9f9;
+}
+
+.la-label-content-box {
+  margin-left: 10px;
+}
+
+.la-label-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.la-label-description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.la-prescription-modal-footer {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.la-prescription-form-btn {
+  background-color: #38b4ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.la-prescription-form-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Styles for the buttons */
+.la-label-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: var(--colorBtnPrimary);
+  color: var(--colorBtnPrimaryText);
+  border: none;
+  border-radius: var(--buttonRadius);
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--typeBaseSize);
+  font-family: var(--typeBasePrimary), var(--typeBaseFallback);
+}
+
+.la-label-btn:hover {
+  background-color: var(--colorBtnPrimaryLight);
+}
+
+/* Styles for the "Choose Your Lenses" section */
+#choose-lenses-section {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: var(--colorBodyDim);
+  border-radius: var(--buttonRadius);
+  text-align: center;
+}
+
+.lens-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.lens-option {
+  padding: 15px;
+  background-color: var(--colorBtnPrimary);
+  color: var(--colorBtnPrimaryText);
+  border: none;
+  border-radius: var(--buttonRadius);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.lens-option:hover {
+  background-color: var(--colorBtnPrimaryLight);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lens-card {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.lens-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.lens-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.lens-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.lens-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* New Styles for Lenses Page */
+:root {
+  --colorBtnPrimary: #111111;
+  --colorBtnPrimaryLight: #2b2b2b;
+  --colorBtnPrimaryDim: #040404;
+  --colorBtnPrimaryText: #ffffff;
+  --colorCartDot: #ba4444;
+  --colorCartDotText: #fff;
+  --colorLink: #000000;
+  --colorTextBody: #000000;
+  --colorPrice: #1c1d1d;
+  --colorTextSavings: #ba4444;
+  --colorSaleTag: #ba4444;
+  --colorSaleTagText: #ffffff;
+  --colorBody: #ffffff;
+  --colorBodyDim: #f2f2f2;
+  --colorFooter: #ffffff;
+  --colorFooterBorder: #e8e8e1;
+  --colorFooterText: #000000;
+  --colorBorder: #000000;
+  --colorNav: #000000;
+  --colorNavText: #ffffff;
+  --colorToolbar: #549738;
+  --colorToolbarText: #ffffff;
+  --colorNavSearch: #e8e8e1;
+  --colorModalBg: #e0e0e0;
+  --colorScheme1Text: #ffffff;
+  --colorScheme1Bg: #000000;
+  --colorScheme2Text: #f2e5e5;
+  --colorScheme2Bg: #ffffff;
+  --colorScheme3Text: #000000;
+  --colorScheme3Bg: #ffffff;
+  --pageTopPadding: 35px;
+  --pageNarrow: 700px;
+  --pageWidthPadding: 40px;
+  --gridGutter: 22px;
+  --indexSectionPadding: 60px;
+  --sectionHeaderBottom: 40px;
+  --collapsibleIconWidth: 12px;
+  --sizeChartMargin: 30px 0;
+  --sizeChartIconMargin: 5px;
+  --newsletterReminderPadding: 20px 30px 20px 25px;
+  --textFrameMargin: 10px;
+  --color-body-text: #010101;
+  --color-body: #ffffff;
+  --color-bg: #ffffff;
+  --typeHeaderPrimary: -apple-system;
+  --typeHeaderFallback: BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --typeHeaderSize: 32px;
+  --typeHeaderWeight: 400;
+  --typeHeaderLineHeight: 1.1;
+  --typeHeaderSpacing: 0.05em;
+  --typeBasePrimary: "Century Gothic";
+  --typeBaseFallback: sans-serif;
+  --typeBaseSize: 15px;
+  --typeBaseWeight: 400;
+  --typeBaseSpacing: 0.05em;
+  --typeBaseLineHeight: 1.6;
+  --colorSmallImageBg: #ffffff;
+  --colorSmallImageBgDark: #f7f7f7;
+  --colorLargeImageBg: #0f0f0f;
+  --colorLargeImageBgLight: #303030;
+  --iconWeight: 6px;
+  --iconLinecaps: miter;
+  --buttonRadius: 3px;
+  --btnPadding: 11px 25px;
+  --roundness: 15px;
+  --gridThickness: 0px;
+  --productTileMargin: 0%;
+  --collectionTileMargin: 13%;
+  --swatchSize: 40px;
+  --lxs-rating-icon-color: #f9992b;
+  --header-padding-bottom: 55px;
+  --lensadvizor-modal-btn-background-color: #38b4ff;
+  --lensadvizor-modal-btn-color: #fff;
+  --maxDrawerHeight: 512px;
+}
+
+.la-accordion-head.la-label-btn {
+  letter-spacing: var(--typeBaseSpacing);
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeSpeed;
+  font-weight: var(--typeBaseWeight);
+  font-size: 100%;
+  line-height: 1.5;
+  font-style: unset;
+  color: #000;
+  width: 100%;
+  outline: 0;
+  transition: .4s;
+  font-family: Arial;
+  display: flex !important;
+  align-items: center;
+  column-gap: 1rem;
+  border: 1px solid #dfe3e8;
+  padding: 15px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: pointer;
+  text-transform: unset;
+  box-sizing: border-box;
+  margin: 10px auto;
+  margin-bottom: unset;
+}
+
+.la-lensgroup-header-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.la-lensgroup-title {
+color: white !important; /* Force white color */
+  margin: 0;
+  font-size: var(--typeBaseSize);
+  font-weight: var(--typeBaseWeight);
+  line-height: var(--typeBaseLineHeight);
+}
+/* New Styles for Lenses Page */
+.lens-options-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.lens-options {
+  flex: 1;
+  max-width: 300px; /* Adjust width as needed */
+}
+
+.selected-product-image {
+  flex: 1;
+  text-align: center;
+}
+
+.selected-product-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(117, 114, 114, 0.1);
+}
+
+/* Decrease Button Size */
+.la-accordion-head.la-label-btn {
+  padding: 10px; /* Reduced padding */
+  margin: 5px 0; /* Reduced margin */
+  font-size: 14px; /* Smaller font size */
+}
+
+.la-lensgroup-header-image img {
+  width: 30px; /* Smaller image size */
+  height: 30px; /* Smaller image size */
+}
+
+.la-lensgroup-title {
+  font-size: 14px; /* Smaller font size */
+}
+/* Increase page length and spacing */
+body {
+  padding: 20px 0; /* Add padding to the top and bottom of the page */
+}
+
+#choose-lenses-section {
+  padding: 40px 20px; /* Increase padding inside the lenses section */
+  margin: 20px auto; /* Add margin to create space around the section */
+  max-width: 1200px; /* Limit the width for better readability */
+}
+
+.lens-options-wrapper {
+  gap: 40px; /* Increase space between buttons and selected product image */
+  margin-top: 40px; /* Add more space above the buttons */
+}
+
+.lens-options {
+  max-width: 400px; /* Increase width of the buttons column */
+}
+
+.selected-product-image {
+  flex: 1;
+  text-align: center;
+  padding: 20px; /* Add padding around the selected product image */
+}
+
+/* Increase spacing between buttons */
+.la-accordion-head.la-label-btn {
+  margin: 10px 0; /* Add more space between buttons */
+}
+
+/* Optional: Add a background color to the lenses section */
+#choose-lenses-section {
+  background-color: var(--colorBodyDim); /* Use a light background color */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+/* Add more space between page content and footer */
+main {
+  padding-bottom: 60px; /* Add padding to the bottom of the main content */
+}
+
+footer {
+  margin-top: 60px; /* Increase space above the footer */
+}

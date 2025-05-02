@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/account.css">
+</head>
+<body class="account-page">
+  <header class="account-header">
+    <div class="account-header-content">
+      <div>
+        <h1 class="account-title">My Account</h1>
+        <p class="account-subtitle">Welcome back, <span id="username-display">User</span></p>
+      </div>
+      <button class="account-logout" id="logout">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </button>
+    </div>
+  </header>
+  
+  <main class="account-container">
+    <div class="account-grid">
+      <div class="account-main">
+        <div class="account-card">
+          <h2 class="account-card-title">Order History</h2>
+          <div class="order-history-empty">
+            <i class="fas fa-shopping-bag"></i>
+            <p>You haven't placed any orders yet</p>
+            <a href="shop.html" class="account-action-btn primary mt-3">Start Shopping</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="account-sidebar">
+        <div class="account-card">
+          <h2 class="account-card-title">Account Details</h2>
+          <ul class="account-details-list">
+            <li class="account-details-item">
+              <span class="account-details-label">Name:</span>
+              <span class="account-details-value" id="account-name">Riddhi Pachehara</span>
+            </li>
+            <li class="account-details-item">
+              <span class="account-details-label">Email:</span>
+              <span class="account-details-value" id="account-email">john@example.com</span>
+            </li>
+            <li class="account-details-item">
+              <span class="account-details-label">Member Since:</span>
+              <span class="account-details-value">Jan 2023</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="account-actions">
+          <a href="addresses.html" class="account-action-btn">
+            <i class="fas fa-address-book"></i> Manage Addresses
+          </a>
+          <a href="settings.html" class="account-action-btn">
+            <i class="fas fa-cog"></i> Account Settings
+          </a>
+          <a href="wishlist.html" class="account-action-btn">
+            <i class="fas fa-heart"></i> Wishlist
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <script src="scripts/account.js"></script>
+</body>
+</html>
